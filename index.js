@@ -27,7 +27,7 @@ express()
     }
   })
 
-  app.get('/users', (req,res) => {
+  .get('/users', (req,res) => {
     var getUsersQuery = `SELECT * FROM userstab`;
     console.log(getUsersQuery);
     pool.query(getUsersQuery, (error, result) => {
