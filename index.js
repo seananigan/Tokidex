@@ -62,9 +62,9 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/tokidex'))
-  // .get('/landingpage', (req, res) => res.render('pages/landing'))
+  .get('/landingpage', (req, res) => res.render('pages/viewAll'))
   // .get('/add', (req, res) => res.render('pages/addnew'))
-  // .get('/landingpage', (req, res) => res.sendfile(path.join(__dirname+'/views/pages/landing.ejs')))
+  .get('/landingpage', (req, res) => res.sendfile(path.join(__dirname+'/views/pages/tokidexViewAll.ejs')))
   .get('/db', async (req, res) => {
     try {
       const client = await pool.connect()
@@ -104,7 +104,7 @@ express()
   // }) 
   
 
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
 // const express = require('express');
