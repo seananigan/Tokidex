@@ -124,7 +124,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => {res.render('pages/tokidex')});
-app.get('/tokidexViewAll', (req,res) => { res.render('pages/tokidexViewAll')});
+app.get('/view', (req,res) => { res.render('pages/tokidexViewAll')});
 app.get('/users', (req,res) => {
   var getUsersQuery = `SELECT * FROM userstab`;
   console.log(getUsersQuery);
