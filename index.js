@@ -146,4 +146,9 @@ app.post('/login', (req, res) => {
   var password = req.body.pwd;
   res.send(`Hello, ${username}.  You have password ${password}`);
 });
+
+app.get('/login', (req, res) => {
+  res.render('login');
+ });
+
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
