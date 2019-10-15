@@ -1,0 +1,55 @@
+#buttons {
+    /* position: absolute; */
+    margin: auto;
+    position: absolute;
+    left: 65;
+    right: 0;
+    top: 0;
+    bottom: 300;
+    width: 120px;
+    height: 80px;
+    border-radius: 4;
+    font-size: 20;
+    /* background-color: red; */
+}
+
+#view {
+    background-color: #ef1d28;
+}
+
+#record {
+    background-color: #f8ef1b;
+}
+
+#remove {
+    background-color: #3e8e41;
+}
+
+button {
+    width: 120px;
+    height: 120px;
+    font-size: 20;
+    cursor: pointer;
+    transform: translateY(4px);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#header {
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 90;
+    top: 0;
+    bottom: 750;
+    width: 120px;
+    height: 80px;
+    color: 
+    #ffcb03;
+    font: normal 100% "Comic Sans MS", cursive, sans-serif;
+    font-size: 35;
+}
+
+#view:hover {background-color: #4e66ae}
+#record:hover {background-color: #4e66ae}
+#remove:hover {background-color: #4e66ae}
