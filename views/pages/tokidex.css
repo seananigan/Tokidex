@@ -53,3 +53,24 @@ button {
 #view:hover {background-color: #4e66ae}
 #record:hover {background-color: #4e66ae}
 #remove:hover {background-color: #4e66ae}
+
+table {
+    width: 800px;
+}
+
+th {
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid  #c4c5c5;
+    border-collapse: collapse;
+}
+
+th, td {
+    width: 200px;
+}
+
+th {
+    background-color: #ddd;
+}
