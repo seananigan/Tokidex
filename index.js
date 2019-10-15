@@ -42,9 +42,18 @@ app.get('/users/:id', (req,res) => {
 });
 app.post('/submit', (req, res) => {
   //console.log('post');
-  var newName = req.body.user;
-  var password = req.body.pwd;
-  res.send(`Hello, ${username}.  You have password ${password}`);
+  var newName = req.body.nameInput;
+  var newTrainer = req.body.trainerInput;
+  var newHeight = req.body.heightInput;
+  var newWeight = req.body.weightInput;
+  var newFire = req.body.fireInput;
+  var newWater = req.body.waterInput;
+  var newElectric = req.body.electricInput;
+  var newFly = req.body.flyInput;
+  var newFight = req.body.fightInput;
+  var newIce = req.body.iceInput;
+
+  res.send(`Hello, ${newName}.  You have height ${newHeight}`);
 });
 
 app.get('/login', (req, res) => {
