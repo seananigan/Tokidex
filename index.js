@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
   {res.render('pages/tokidex')}
 });
 
-app.get('/add', (req,res) => { res.render('pages/add')});
+app.get('/add', (req,res) => { res.render('pages/addform')});
 
 app.get('/view', (req,res) => {
   var getUsersQuery = `SELECT * FROM tokidexdb`;
