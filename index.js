@@ -40,9 +40,9 @@ app.get('/users/:id', (req,res) => {
   console.log(req.params.id);
   var userIDQuery = `SELECT * FROM userstab WHERE uid=${req.params.id}`;
 });
-app.post('/login', (req, res) => {
+app.post('/submit', (req, res) => {
   //console.log('post');
-  var username = req.body.user;
+  var newName = req.body.user;
   var password = req.body.pwd;
   res.send(`Hello, ${username}.  You have password ${password}`);
 });
