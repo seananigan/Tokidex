@@ -15,11 +15,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.get('/', (req, res) => {res.render('pages/tokidex')}
+app.get('/', (req, res) => {
 
-  // var createTable = ` CREATE TABLE IF NOT EXISTS tokidexdb (name varchar(50) NOT NULL, trainer varchar(50) NOT NULL, height int, weight int, fire int, water int, electric int, 
-  // fly int, fight int, ice int)`
-);
+   var createTable = ` CREATE TABLE IF NOT EXISTS tokidexdb (name varchar(50) NOT NULL, trainer varchar(50) NOT NULL, height int, weight int, fire int, water int, electric int, 
+   fly int, fight int, ice int)`
+  pool.query(createTable,(error, result) => {});
+  {res.render('pages/tokidex')}
+});
+
 app.get('/add', (req,res) => { res.render('pages/add')});
 
 app.get('/view', (req,res) => {
