@@ -6,7 +6,8 @@ var app = express();
 const { Pool } = require('pg');
 var pool;
 pool = new Pool({
-  connectionString: process.env.DATABASE_URL
+  // connectionString: process.env.DATABASE_URL
+  connectionString: 'postgres://seandales:1234@localhost/tokidextable2'
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
