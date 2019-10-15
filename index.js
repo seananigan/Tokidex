@@ -124,7 +124,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => {res.render('pages/tokidex')});
-app.get('/view', (req,res) => { res.render('pages/tokidexViewAll')});
+app.get('/add', (req,res) => { res.render('pages/add')});
 app.get('/users', (req,res) => {
   var getUsersQuery = `SELECT * FROM userstab`;
   console.log(getUsersQuery);
@@ -150,5 +150,78 @@ app.post('/login', (req, res) => {
 app.get('/login', (req, res) => {
   res.render('login');
  });
+
+ const { Pool } = require('pg');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL
+});
+
+pool.on('connect', () => {
+  console.log('connected to the db');
+});
+
+/**
+ * Create Tables
+ */
+const createTables = () => {
+  const queryText =
+    `CREATE TABLE IF NOT EXISTS
+      reflections(
+        id UUID PRIMARY KEY,
+        name VARCHAR(128) NOT NULL,
+        trainer VARCHAR(128) NOT NULL,
+        height int,
+        weight int,
+        height int,
+        fire int,
+        water int,
+        electric int,
+        fly int,
+        fight int,
+        ice int,
+      )`;
+
+  pool.query(queryText)
+    .then((res) => {
+      console.log(res);
+      pool.end();
+    })
+    .catch((err) => {
+      console.log(err);
+      pool.end();
+    });
+}
+
+/**
+ * Drop Tables
+ */
+const dropTables = () => {
+  const queryText = 'DROP TABLE IF EXISTS reflections';
+  pool.query(queryText)
+    .then((res) => {
+      console.log(res);
+      pool.end();
+    })
+    .catch((err) => {
+      console.log(err);
+      pool.end();
+    });
+}
+
+pool.on('remove', () => {
+  console.log('tokimon removed');
+  process.exit(0);
+});
+
+module.exports = {
+  createTables,
+  dropTables
+};
+
+require('make-runnable');
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
