@@ -222,6 +222,6 @@ pool.on('connect', () => {
 //   dropTables
 // };
 
-// require('make-runnable');
+require('make-runnable');
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
