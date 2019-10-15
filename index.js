@@ -1,30 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@seananigan 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-1
-00seananigan/Tokidex
- Code Issues 0 Pull requests 0 Projects 0 Wiki Security Insights Settings
-Tokidex/index.js
- Sean Dales previous index
-77c41ed 2 hours ago
-45 lines (41 sloc)  1.31 KB
-  
-Jump to definition is available!Beta
-Navigate your code with ease. In select public repositories, you can now click on function and method calls to jump to their definitions in the same repository. Learn more
-
- Jump to definition is still being calculated for this commit. Check back in a bit. Beta
-
-Learn more or give us feedback
 const express = require('express');
 const path = require('path');
 const PORT = process.env.PORT || 5000
@@ -70,15 +43,3 @@ app.get('/login', (req, res) => {
  });
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
