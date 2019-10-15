@@ -55,9 +55,9 @@ app.post('/submit', (req, res) => {
 
   // res.send(`Hello, ${newName}.  You have height ${newHeight}`);
 
-  INSERT INTO tokidexdb
-  VALUES (${req.params.newName}, ${req.params.newTrainer}, ${req.params.newHeight}, ${req.params.newWeight}, ${req.params.newFire}, 
-    ${req.params.newWater}, ${req.params.newElectric}, ${req.params.newFly}, ${req.params.newFight}, ${req.params.newIce});
+  `INSERT INTO tokidexdb
+  VALUES (${req.body.newName}, ${req.body.newTrainer}, ${req.body.newHeight}, ${req.body.newWeight}, ${req.body.newFire}, 
+    ${req.body.newWater}, ${req.body.newElectric}, ${req.body.newFly}, ${req.body.newFight}, ${req.body.newIce})`;
 });
 
 app.get('/login', (req, res) => {
