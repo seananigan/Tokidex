@@ -9,6 +9,7 @@ th {
 table, th, td {
     border: 1px solid  #c4c5c5;
     border-collapse: collapse;
+    background: #c4c5c5
 }
 
 th, td {
