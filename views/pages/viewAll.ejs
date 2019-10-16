@@ -16,6 +16,37 @@
     <% }; %>
 </ul>
 
+<table>
+        <tr>
+            <th>Name</th>
+            <th>Trainer</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Fire</th>
+            <th>Water</th>
+            <th>Electric</th>
+            <th>Fly</th>
+            <th>Fight</th>
+            <th>Ice</th>
+            <th>Total</th>
+        </tr>
+        <% for (var j=0; j<rows.length; j++) {%>
+            <tr>
+                <td><%= rows[j].name %></td>
+                <td><%= rows[j].trainer %></td>
+                <td><%= rows[j].height %></td>
+                <td><%= rows[j].weight %></td>
+                <td><%= rows[j].fire %></td>
+                <td><%= rows[j].water %></td>
+                <td><%= rows[j].electric %></td>
+                <td><%= rows[j].fly %></td>
+                <td><%= rows[j].fight %></td>
+                <td><%= rows[j].ice %></td>
+                <td><%= parseFloat(rows[j].height) + parseFloat(rows[j].weight) + parseFloat(rows[j].fire) + parseFloat(rows[j].water)
+                + parseFloat(rows[j].electric) + parseFloat(rows[j].fly) + parseFloat(rows[j].fight) + parseFloat(rows[j].ice) %></td>
+            </tr>
+        <%}; %>
+</table>
 </div>
 </body>
 </html>

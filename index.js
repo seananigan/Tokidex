@@ -6,8 +6,8 @@ var app = express();
 const { Pool } = require('pg');
 var pool;
 pool = new Pool({
-  connectionString: process.env.DATABASE_URL
-  // connectionString: 'postgres://postgres:postgres@localhost/tokidexdb'
+  // connectionString: process.env.DATABASE_URL
+  connectionString: 'postgres://postgres:postgres@localhost/tokidexdb'
 });
 pool.connect();
 
@@ -45,19 +45,7 @@ app.get('/viewAll', (req,res) => {
 //   var userIDQuery = `SELECT * FROM userstab WHERE uid=${req.params.id}`;
 // });
 app.post('/submit', (req, res) => {
-  //console.log('post');
-  // var newName = req.body.nameInput;
-  // var newTrainer = req.body.trainerInput;
-  // var newHeight = req.body.heightInput;
-  // var newWeight = req.body.weightInput;
-  // var newFire = req.body.fireInput;
-  // var newWater = req.body.waterInput;
-  // var newElectric = req.body.electricInput;
-  // var newFly = req.body.flyInput;
-  // var newFight = req.body.fightInput;
-  // var newIce = req.body.iceInput;
 
-  // res.send(`Hello, ${newName}.  You have height ${newHeight}`) ;
 
   var insertQuery = `INSERT INTO tokidextable2(name, trainer, height, weight, fire, water, electric, fly, fight, ice) 
     VALUES ('${req.body.nameInput}', '${req.body.trainerInput}', '${req.body.heightInput}', '${req.body.weightInput}', '${req.body.fireInput}', 
