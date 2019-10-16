@@ -65,7 +65,7 @@ app.get('/info/:id', (req,res) => {
 });
 
 // app.get('/users/:id', (req,res) => {
-//   console.log(req.params.id);
+//   console.log(req.params.id) ;
 //   var userIDQuery = `SELECT * FROM userstab WHERE uid=${req.params.id}`;
 // });
 
