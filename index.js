@@ -25,6 +25,8 @@ app.get('/', (req, res) => {
 
 app.get('/add', (req,res) => { res.render('pages/addform')});
 
+app.get('/view', (req,res) => { res.render('pages/viewAll')});
+
 app.get('/view', (req,res) => {
   var getUsersQuery = `SELECT * FROM tokidexdb`;
   console.log(getUsersQuery);
@@ -33,7 +35,7 @@ app.get('/view', (req,res) => {
       res.end(error);
     var results = {'rows': result.rows };
     console.log(results);
-    res.render('pages/users', results)
+    res.render('pages/view', results)
   });
 });
 app.get('/users/:id', (req,res) => {

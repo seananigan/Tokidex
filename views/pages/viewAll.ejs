@@ -1,0 +1,22 @@
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+<% include ../partials/nav.ejs %>
+
+<div class="container">
+<h2>Database Results</h2>
+
+<ul>
+    <% for (var j=0; j<rows.length; j++) {%>
+        <li><%= rows[j].nameInput %> - <%= rows[j].trainerInput%> - <%= rows[j].heightInput%> - <%= rows[j].weightInput%> - <%= rows[j].fireInput%> - 
+            <%= rows[j].WaterInput%> - <%= rows[j].electricInput%> <%= rows[j].flyInput%> - <%= rows[j].fightInput%> - <%= rows[j].iceInput%></li>
+    <% }; %>
+</ul>
+
+</div>
+</body>
+</html>
