@@ -27,9 +27,12 @@ th {
 
 #Sorry {
     color: white;
-    font-size: 45;
 }
 
 #sorrytext {
     font-size: 45;
+}
+
+#sorryhead {
+    font-size: 30
 }
