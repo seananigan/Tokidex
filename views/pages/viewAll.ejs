@@ -38,8 +38,8 @@
                 <td><%= rows[j].fight %></td>
                 <td><%= rows[j].ice %></td>
                 <td><%= parseFloat(rows[j].fire) + parseFloat(rows[j].water) + parseFloat(rows[j].electric) + parseFloat(rows[j].fly) + parseFloat(rows[j].fight) + parseFloat(rows[j].ice) %></td>
-                <td> <a href='/remove/<%=rows[j].id%>'>REMOVE</a></td>
-                <td> <a href='/info/<%=rows[j].id%>'>INFO</a></td>
+                <td> <a href='/remove/<%=rows[j].toki_id%>'>REMOVE</a></td>
+                <td> <a href='/info/<%=rows[j].toki_id%>'>INFO</a></td>
             </tr>
         <%}; %>
 </table>

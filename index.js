@@ -44,8 +44,8 @@ app.get('/viewAll', (req,res) => {
   });
 });
 
-app.get('/remove/:id', (req,res) => {
-  var deleteQuery = `DELETE FROM tokidextable3 WHERE id=${req.params.id}`;
+app.get('/remove/:toki_id', (req,res) => {
+  var deleteQuery = `DELETE FROM tokidextable3 WHERE toki_id=${req.params.toki_id}`;
   pool.query(deleteQuery, (error, result) => {
       if (error)
           res.end(error);
@@ -53,9 +53,9 @@ app.get('/remove/:id', (req,res) => {
   res.render('pages/deleted')
 });
 
-app.get('/info/:id', (req,res) => {
+app.get('/info/:toki_id', (req,res) => {
   req.params.id
-  var idQuery = `SELECT * FROM tokidextable3 WHERE id=${req.params.id}`;
+  var idQuery = `SELECT * FROM tokidextable3 WHERE toki_id=${req.params.toki_id}`;
   pool.query(idQuery, (error, result) => {
       if (error)
           res.end(error);
