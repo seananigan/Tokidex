@@ -40,6 +40,17 @@ app.get('/viewAll', (req,res) => {
     res.render('pages/viewAll', results)
   });
 });
+
+app.get('/remove/:id', (req,res) => {
+  req.params.tid
+  var deleteQuery = DELETE FROM tokidextable2 WHERE id=${req.params.id};
+  pool.query(deleteQuery, (error, result) => {
+      if (error)
+          res.end(error);
+      res.render('pages/tokidex')
+  });
+});
+
 // app.get('/users/:id', (req,res) => {
 //   console.log(req.params.id);
 //   var userIDQuery = `SELECT * FROM userstab WHERE uid=${req.params.id}`;

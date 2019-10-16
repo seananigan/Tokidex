@@ -29,6 +29,7 @@
             <th>Fight</th>
             <th>Ice</th>
             <th>Total</th>
+            <th>Delete</th>
         </tr>
         <% for (var j=0; j<rows.length; j++) {%>
             <tr>
@@ -42,8 +43,8 @@
                 <td><%= rows[j].fly %></td>
                 <td><%= rows[j].fight %></td>
                 <td><%= rows[j].ice %></td>
-                <td><%= parseFloat(rows[j].fire) + parseFloat(rows[j].water)
-                + parseFloat(rows[j].electric) + parseFloat(rows[j].fly) + parseFloat(rows[j].fight) + parseFloat(rows[j].ice) %></td>
+                <td><%= parseFloat(rows[j].fire) + parseFloat(rows[j].water) + parseFloat(rows[j].electric) + parseFloat(rows[j].fly) + parseFloat(rows[j].fight) + parseFloat(rows[j].ice) %></td>
+                <td> <a href='/remove/<%=rows[j].id%>'>REMOVE</a></td>
             </tr>
         <%}; %>
 </table>
