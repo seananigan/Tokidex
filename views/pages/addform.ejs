@@ -9,34 +9,34 @@
     <body> 
         <form id="form" action="/submit" method="post">
             Name:<br>
-            <input type="text" name="nameInput">
+            <input type="text" name="nameInput" required>
             <br>
             Trainer:<br>
-            <input type="text" name="trainerInput">
+            <input type="text" name="trainerInput" required>
             <br>
             Height:<br>
-            <input type="number" name="heightInput">
+            <input type="number" name="heightInput" min="0" required>
             <br>
             Weight:<br>
-            <input type="number" name="weightInput">
+            <input type="number" name="weightInput" min="0" required>
             <br>
             Fire:<br>
-            <input type="number" name="fireInput">
+            <input type="number" name="fireInput" min="0" max="100" required>
             <br>
             Water:<br>
-            <input type="number" name="waterInput">
+            <input type="number" name="waterInput" min="0" max="100" required>
             <br>
             Electric:<br>
-            <input type="number" name="electricInput">
+            <input type="number" name="electricInput" min="0" max="100" required>
             <br>
             Fly:<br>
-            <input type="number" name="flyInput">
+            <input type="number" name="flyInput" min="0" max="100" required>
             <br>
             Fight:<br>
-            <input type="number" name="fightInput">
+            <input type="number" name="fightInput" min="0" max="100" required>
             <br>
             Ice:<br>
-            <input type="number" name="iceInput">
+            <input type="number" name="iceInput" min="0" max="100" required>
             <br>
             <button id="submit">Report Capture</button>
             <br>
