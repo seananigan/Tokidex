@@ -57,9 +57,14 @@ app.post('/submit', (req, res) => {
 
   // res.send(`Hello, ${newName}.  You have height ${newHeight}`);
 
-  `INSERT INTO tokidexdb
+  var insertQuery = `INSERT INTO tokidexdb
   VALUES (${req.body.newName}, ${req.body.newTrainer}, ${req.body.newHeight}, ${req.body.newWeight}, ${req.body.newFire}, 
     ${req.body.newWater}, ${req.body.newElectric}, ${req.body.newFly}, ${req.body.newFight}, ${req.body.newIce})`;
+    pool.query(insertQuery, (error) => {
+      if (error)
+        res.end(error);
+      res.render('pages/view')
+    });
 });
 
 app.get('/login', (req, res) => {
