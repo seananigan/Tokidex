@@ -28,6 +28,8 @@ app.get('/addform', (req,res) => { res.render('pages/addform')});
 
 app.get('/deleted', (req,res) => { res.render('pages/deleted')});
 
+app.get('/edit', (req,res) => { res.render('pages/edit')});
+
 app.get('/view', (req,res) => { res.render('pages/viewAll')});
 
 app.get('/viewAll', (req,res) => {
