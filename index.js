@@ -7,7 +7,7 @@ const { Pool } = require('pg');
 var pool;
 pool = new Pool({
   // connectionString: process.env.DATABASE_URL
-  connectionString: 'postgres://postgres:postgres@localhost/tokidextable2'
+  connectionString: 'postgres://postgres:postgres@localhost/tokidexdb'
 });
 pool.connect();
 
@@ -34,8 +34,9 @@ app.get('/viewAll', (req,res) => {
   pool.query(viewQuery, (error, result) => {
     if (error)
       res.end(error);
-    var results = {'rows': result.rows };
     console.log(results);
+    var results = {'rows': result.rows };
+    
     res.render('pages/viewAll', results)
   });
 });
