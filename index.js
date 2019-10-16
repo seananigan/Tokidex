@@ -28,6 +28,8 @@ app.get('/addform', (req,res) => { res.render('pages/addform')});
 
 app.get('/deleted', (req,res) => { res.render('pages/deleted')});
 
+app.get('/added', (req,res) => { res.render('pages/added')});
+
 app.get('/edit', (req,res) => { res.render('pages/edit')});
 
 app.get('/view', (req,res) => { res.render('pages/viewAll')});
@@ -82,7 +84,7 @@ app.post('/submit', (req, res) => {
       if (error)
         res.end(error);
     });
-    res.render('pages/tokidex')
+    res.render('pages/added')
 });
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
