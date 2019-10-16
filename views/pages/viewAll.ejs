@@ -1,19 +1,18 @@
 <html>
 <head>
-  <% include ../partials/header.ejs %>
+
 </head>
 
 <body>
 
-<% include ../partials/nav.ejs %>
 
 <div class="container">
 <h2>Database Results</h2>
 
 <ul>
     <% for (var j=0; j<rows.length; j++) {%>
-        <li><%= rows[j].nameInput %> - <%= rows[j].trainerInput%> - <%= rows[j].heightInput%> - <%= rows[j].weightInput%> - <%= rows[j].fireInput%> - 
-            <%= rows[j].WaterInput%> - <%= rows[j].electricInput%> <%= rows[j].flyInput%> - <%= rows[j].fightInput%> - <%= rows[j].iceInput%></li>
+        <li><%= rows[j].name %> - <%= rows[j].trainer%> - <%= rows[j].height%> - <%= rows[j].weight%> - <%= rows[j].fire%> - 
+            <%= rows[j].water%> - <%= rows[j].electric%> <%= rows[j].fly%> - <%= rows[j].fight%> - <%= rows[j].ice%></li>
     <% }; %>
 </ul>
 
