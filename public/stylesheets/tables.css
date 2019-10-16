@@ -13,12 +13,9 @@ table, th, td {
 
 th, td {
     width: 200px;
+    text-align: center;
 }
 
 th {
     background-color: #ddd;
-}
-
-td {
-    text-align: center;
 }
