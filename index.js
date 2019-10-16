@@ -6,8 +6,8 @@ var app = express();
 const { Pool } = require('pg');
 var pool;
 pool = new Pool({
-  // connectionString: process.env.DATABASE_URL
-  connectionString: 'postgres://postgres:postgres@localhost/tokidexdb'
+  connectionString: process.env.DATABASE_URL
+  // connectionString: 'postgres://postgres:postgres@localhost/tokidexdb'
 });
 pool.connect();
 
