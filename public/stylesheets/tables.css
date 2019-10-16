@@ -18,3 +18,7 @@ th, td {
 th {
     background-color: #ddd;
 }
+
+td {
+    text-align: center;
+}
