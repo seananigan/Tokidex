@@ -55,7 +55,7 @@ app.post('/submit', (req, res) => {
   var newFight = req.body.fightInput;
   var newIce = req.body.iceInput;
 
-  // res.send(`Hello, ${newName}.  You have height ${newHeight}`);
+  // res.send(`Hello, ${newName}.  You have height ${newHeight}`) ;
 
   var insertQuery = `INSERT INTO tokidexdb
   VALUES (${req.body.newName}, ${req.body.newTrainer}, ${req.body.newHeight}, ${req.body.newWeight}, ${req.body.newFire}, 
